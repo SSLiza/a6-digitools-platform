@@ -29,20 +29,20 @@ function App() {
       <Header />
       <Rating />
 
-      <div className="text-center space-y-5">
+      <div className="text-center mt-20 space-y-5">
         <h2 className="text-5xl font-bold">Premium Digital Tools</h2>
         <p className='text-gray-400 text-xl'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
       </div>
 
 
       <div className="flex justify-center mt-6">
-        <div className="flex bg-gray-200 p-2 rounded-full w-[400px] justify-between">
+        <div className="flex bg-white border border-gray-200 p-2 rounded-full justify-between">
           <button
             onClick={() => setActiveTab("products")}
-            className={`px-6 py-2 rounded-full text-xl
+            className={`px-6 w-[150px] py-2 rounded-full text-xl font-semibold
             ${activeTab === "products"
                 ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
-                : "bg-gray-200"}
+                : "bg-white"}
           `}
           >
             Products
@@ -50,10 +50,10 @@ function App() {
 
           <button
             onClick={() => setActiveTab("cart")}
-            className={`px-6 py-2 rounded-full text-xl
+            className={`px-6 w-[150px] py-2 rounded-full text-xl font-semibold
             ${activeTab === "cart"
                 ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
-                : "bg-gray-200"}
+                : "bg-white"}
           `}
           >
             Cart ({carts.length})
