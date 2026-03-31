@@ -3,7 +3,7 @@ import { CiShoppingCart } from 'react-icons/ci';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-base-100 shadow px-50 py- h-23">
+        <div className="navbar bg-base-100 shadow px-50 h-23">
   <a className="flex items-center navbar-start text-transparent bg-clip-text bg-gradient-to-r from-[#4f39f6] to-[#9514fa] text-4xl font-bold p-3">
   DigiTools
 </a>
