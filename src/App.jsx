@@ -25,21 +25,29 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar carts={carts} />
       <Header />
       <Rating />
 
-      <div className="text-center mt-20 space-y-5">
-        <h2 className="text-5xl font-bold">Premium Digital Tools</h2>
-        <p className='text-gray-400 text-xl'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
+      {/* Section Heading */}
+      <div className="text-center mt-12 sm:mt-16 lg:mt-20 px-4 sm:px-6 lg:px-0 space-y-4 sm:space-y-5">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+          Premium Digital Tools
+        </h2>
+        <p className='text-gray-400 text-sm sm:text-base lg:text-xl max-w-2xl mx-auto'>
+          Choose from our curated collection of premium digital products designed
+          <br className="hidden md:block" />
+          to boost your productivity and creativity.
+        </p>
       </div>
 
-
-      <div className="flex justify-center mt-6">
-        <div className="flex bg-white border border-gray-200 p-2 rounded-full justify-between">
+      {/* Tabs */}
+      <div className="flex justify-center mt-6 px-4">
+        <div className="flex flex gap-2 sm:gap-0 bg-white border border-gray-200 p-2 rounded-4xl sm:rounded-full">
+          
           <button
             onClick={() => setActiveTab("products")}
-            className={`px-6 w-[150px] py-2 rounded-full text-xl font-semibold
+            className={`px-4 sm:px-6 w-full sm:w-[150px] py-2 rounded-full text-sm sm:text-base lg:text-xl font-semibold transition-all
             ${activeTab === "products"
                 ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
                 : "bg-white"}
@@ -50,7 +58,7 @@ function App() {
 
           <button
             onClick={() => setActiveTab("cart")}
-            className={`px-6 w-[150px] py-2 rounded-full text-xl font-semibold
+            className={`px-4 sm:px-6 w-full sm:w-[150px] py-2 rounded-full text-sm sm:text-base lg:text-xl font-semibold transition-all
             ${activeTab === "cart"
                 ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
                 : "bg-white"}
@@ -58,21 +66,35 @@ function App() {
           >
             Cart ({carts.length})
           </button>
+
         </div>
       </div>
-      {activeTab === "products" ? (
-        <Product
-          productPromise={productPromise}
-          carts={carts}
-          setCarts={setCarts}
-        />
-      ) : (
-        <Cart carts={carts} setCarts={setCarts} />
-      )}
-      <StepsSection />
-      <PricingCard />
-      <ToastContainer />
+
+      {/* Content */}
+      <div className="px-4 sm:px-6 lg:px-10 xl:px-20 mt-8">
+        {activeTab === "products" ? (
+          <Product
+            productPromise={productPromise}
+            carts={carts}
+            setCarts={setCarts}
+          />
+        ) : (
+          <Cart carts={carts} setCarts={setCarts} />
+        )}
+      </div>
+
+      {/* Other Sections */}
+      <div className="mt-12 sm:mt-16 lg:mt-20">
+        <StepsSection />
+      </div>
+
+      <div className="mt-12 sm:mt-16 lg:mt-20">
+        <PricingCard />
+      </div>
+
       <Footer />
+
+      <ToastContainer />
     </>
   )
 }
