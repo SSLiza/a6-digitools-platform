@@ -36,28 +36,29 @@ function App() {
 
 
       <div className="flex justify-center mt-6">
-
-        <button
-          onClick={() => setActiveTab("products")}
-          className={`px-6 py-2 rounded-full text-xl
+        <div className="flex bg-gray-200 p-2 rounded-full w-[400px] justify-between">
+          <button
+            onClick={() => setActiveTab("products")}
+            className={`px-6 py-2 rounded-full text-xl
             ${activeTab === "products"
-              ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
-              : "bg-gray-200"}
+                ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
+                : "bg-gray-200"}
           `}
-        >
-          Products
-        </button>
+          >
+            Products
+          </button>
 
-        <button
-          onClick={() => setActiveTab("cart")}
-          className={`px-6 py-2 rounded-full text-xl
+          <button
+            onClick={() => setActiveTab("cart")}
+            className={`px-6 py-2 rounded-full text-xl
             ${activeTab === "cart"
-              ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
-              : "bg-gray-200"}
+                ? "bg-gradient-to-r from-purple-500 to-indigo-500 text-white"
+                : "bg-gray-200"}
           `}
-        >
-          Cart ({carts.length})
-        </button>
+          >
+            Cart ({carts.length})
+          </button>
+        </div>
       </div>
       {activeTab === "products" ? (
         <Product
