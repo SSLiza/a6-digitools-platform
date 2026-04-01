@@ -9,6 +9,7 @@ import Cart from './components/Cart'
 import StepsSection from './components/StepsSection'
 import PricingCard from './components/PricingCard'
 import Footer from './components/Footer'
+import CTA from './components/CTA'
 
 const getProducts = async () => {
   const res = await fetch('/Data.json')
@@ -97,7 +98,7 @@ function App() {
       <div className="mt-12 sm:mt-16 lg:mt-20">
         <PricingCard />
       </div>
-
+      <CTA />
       <Footer />
 
       <ToastContainer />

@@ -1,4 +1,6 @@
 import React from "react";
+import { FaFacebookSquare, FaTwitter } from "react-icons/fa";
+import { FaSquareInstagram, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -6,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
 
         {/* Top Grid */}
-        <div className="grid md:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-5 gap-4">
 
           {/* Brand */}
           <div>
@@ -14,9 +16,7 @@ const Footer = () => {
               DigiTools
             </h2>
             <p className="text-sm text-gray-400">
-              Premium digital tools for creators, professionals, and businesses.
-              Work smarter with our suite of powerful tools.
-            </p>
+              Premium digital tools for creators, <br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
           </div>
 
           {/* Product */}
@@ -57,14 +57,16 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-3">Social Links</h3>
 
             <div className="flex gap-3">
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600 cursor-pointer">
-                f
+              <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full hover:bg-gray-600 cursor-pointer text-black">
+                <FaSquareInstagram/>
+
               </div>
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600 cursor-pointer">
-                in
+              <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full hover:bg-gray-600 cursor-pointer text-black">
+                <FaFacebookSquare />
               </div>
-              <div className="w-8 h-8 flex items-center justify-center bg-gray-700 rounded-full hover:bg-gray-600 cursor-pointer">
-                X
+              <div className="w-8 h-8 flex items-center justify-center bg-white rounded-full hover:bg-gray-600 cursor-pointer text-black">
+                <FaXTwitter />
+
               </div>
             </div>
           </div>
@@ -77,7 +79,7 @@ const Footer = () => {
             © 2026 DigiTools. All rights reserved.
           </p>
 
-          <div className="flex gap-6 mt-4 md:mt-0">
+          <div className="flex gap-6 mt-4 md:mt-0 text-gray-400">
             <span className="hover:text-white cursor-pointer">Privacy Policy</span>
             <span className="hover:text-white cursor-pointer">Terms of Service</span>
             <span className="hover:text-white cursor-pointer">Cookies</span>

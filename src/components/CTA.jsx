@@ -8,7 +8,7 @@ const CTA = () => {
         </h2>
 
         <p className="mb-6 text-sm opacity-90">
-          Join thousands of users already using our platform
+          Join thousands of professionals who are already using Digitools to work smarter. <br /> Start your free trial today.
         </p>
 
         <div className="flex justify-center gap-4">
@@ -22,7 +22,7 @@ const CTA = () => {
         </div>
 
         <p className="text-xs mt-4 opacity-75">
-          14-day free trial • No credit card required
+          14-day free trial • No credit card required • Cancel anytime
         </p>
       </section>
     );

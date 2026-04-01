@@ -5,6 +5,16 @@ const ProductCard = ({ product, carts, setCarts }) => {
 
     // const isInCart = carts.some((item) => item.id === product.id);
 
+    const formatPrice = (price) => {
+  if (price.includes("/")) {
+    const [amount, duration] = price.split("/");
+    return { amount, duration };
+  } else {
+    const [amount, duration] = price.split(" ");
+    return { amount, duration };
+  }
+};
+
     const [isInCart, setIsInCart] = useState(false);
 
     const handleCart = () => {
@@ -36,7 +46,7 @@ const ProductCard = ({ product, carts, setCarts }) => {
                 <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
                 <p className="text-gray-500 text-sm mb-4">High-quality digital tool for productivity.</p>
 
-                <p className="text-xl font-bold mb-4">{product.price}</p>
+                <p className="text-xl font-bold mb-4">{formatPrice(product.price).amount}<span className="text-gray-500 text-lg">/{formatPrice(product.price).duration}</span></p>
 
                 <ul className="space-y-2 mb-6">
                     {product.features.map((f, i) => (
