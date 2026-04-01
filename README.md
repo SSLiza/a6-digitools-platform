@@ -1,16 +1,43 @@
-# React + Vite
+# 🛒 DigiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Project Overview
+The **DigiTools Platform** is a modern and responsive e-commerce platform built with React. It allows users to browse digital tools and manage a shopping cart with interactive UI features. The project focuses on clean design, smooth user experience, and dynamic functionality.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Technologies Used
+- ⚛️ React.js  
+- 🎨 Tailwind CSS  
+- 🌼 DaisyUI  
+- 💻 JavaScript (ES6+)  
+- 🔔 React-Toastify  
+- 📦 JSON (for product data)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+### 1. 🛍️ Product Management
+- Displays digital products dynamically from JSON data  
+- Each product includes:
+  - Name  
+  - Description  
+  - Price & Billing Period  
+  - Tag (Popular, New, Best Seller)  
+  - Features list  
+  - Icon  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. 🛒 Cart Functionality
+- Add products to cart  
+- Remove individual items from carts
+- View the total number of products in a cart inside the navbar. 
+- "Proceed to Checkout" clears the cart  
+- Toast notifications for:
+  - Add to cart  
+  - Remove item  
+  - Checkout  
+
+### 3. 🔄 Toggle System
+- Switch between:
+  - Product Section (default view)  
+  - Cart Section (shows empty message initially)  
