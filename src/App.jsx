@@ -42,9 +42,9 @@ function App() {
       </div>
 
       {/* Tabs */}
-      <div className="flex justify-center mt-6 px-4">
+      <div className="grid justify-center mt-6 px-4">
         <div className="flex flex gap-2 sm:gap-0 bg-white border border-gray-200 p-2 rounded-4xl sm:rounded-full">
-          
+
           <button
             onClick={() => setActiveTab("products")}
             className={`px-4 sm:px-6 w-full sm:w-[150px] py-2 rounded-full text-sm sm:text-base lg:text-xl font-semibold transition-all
@@ -68,6 +68,12 @@ function App() {
           </button>
 
         </div>
+      </div>
+
+      <div className='text-2xl px-6 lg:px-52 font-bold'>
+        {
+          activeTab === "cart" ? <p>Cart ({carts.length})</p> : <p>Products</p>
+        }
       </div>
 
       {/* Content */}

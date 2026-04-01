@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "AI Writing Pro",
     "price": "$29/mo",
     "tag": "Best Seller",
@@ -11,6 +12,7 @@
     ]
   },
   {
+    "id": 2,
     "title": "Design Templates Pack",
     "price": "$49 one-time",
     "tag": "Popular",
@@ -22,6 +24,7 @@
     ]
   },
   {
+    "id": 3,
     "title": "Premium Stock Assets",
     "price": "$19/mo",
     "tag": "New",
@@ -33,6 +36,7 @@
     ]
   },
   {
+    "id": 4,
     "title": "Automation Toolkit",
     "price": "$79/mo",
     "tag": "Popular",
@@ -44,6 +48,7 @@
     ]
   },
   {
+      "id": 5,
     "title": "Resume Builder Pro",
     "price": "$15 one-time",
     "tag": "New",
@@ -55,6 +60,7 @@
     ]
   },
   {
+      "id": 6,
     "title": "Social Media Content Kit",
     "price": "$39/mo",
     "tag": "Best Seller",

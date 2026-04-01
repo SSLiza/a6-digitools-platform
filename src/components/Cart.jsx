@@ -1,4 +1,5 @@
 import { toast } from "react-toastify";
+import Empty from "./Empty";
 
 const Cart = ({ carts, setCarts }) => {
   const totalPrice = carts.reduce((sum, item) => {
@@ -6,27 +7,31 @@ const Cart = ({ carts, setCarts }) => {
   return sum + numericPrice;
 }, 0);
 
+
   const handlePayment = () => {
     setCarts([]);
-    toast.success("Payement successful!");
+    toast.success("Payment successful!");
   };
+  
+const handleDelete = (item) => {
+  const filteredArray = carts.filter((c) => c.id !== item.id);
+  setCarts(filteredArray);
+  toast.success("Item deleted!");
+  console.log(filteredArray);
+};
 
-  const handleDelete = (item) => {
-    const filteredArray = carts.filter((c) => c.id !== item.id);
-    setCarts(filteredArray);
-    toast.success("Item deleted!");
-  };
+
 
   return (
     <div className="my-8 p-10 max-w-7xl mx-auto  border border-gray-200 p-5 rounded-lg">
       <h1 className="text-2xl font-bold">Your Cart</h1>
 
       {carts.length === 0 ? (
-        <p className="text-center text-2xl p-5">Cart is empty</p>
+        <Empty />
       ) : (
         <>
           <div className="space-y-5 mt-4">
-            {carts.map((item) => (
+            {carts.map((item) => ( 
               <div
                 className="flex items-center justify-between bg-gray-100 rounded-lg p-3"
                 key={item.id}

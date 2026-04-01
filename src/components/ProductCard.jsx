@@ -9,15 +9,12 @@ const ProductCard = ({ product, carts, setCarts }) => {
 
     const handleCart = () => {
         if (isInCart) {
-            toast.error("Item already in cart!", {
-                autoClose: 1500,
-            });
+            toast.error("Item already in cart!")
             return;
         }
-        
+        toast.success("Item added to cart!");
         setIsInCart(true);
         setCarts([...carts, product]);
-        toast.success("Item added to cart!");
     };
     return (
         <div className="relative bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col justify-between hover:shadow-lg transition">
